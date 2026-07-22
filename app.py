@@ -5,7 +5,7 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 @app.route('/render', methods=['POST'])
-def render():
+def render(): 
     data = request.get_json()
     script = data.get('script', 'Alpha Tech Kingdom')
     safe_script = script.replace('"', '\\"')
